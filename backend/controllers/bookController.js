@@ -32,7 +32,7 @@ const checkoutBook = asyncHandler( async(req, res) => {
     }
 
     const member = await Member.findById(memberID);
-    if(!memeber){
+    if(!member){
         res.status(404)
         throw new Error("Member does not exist");
     }
